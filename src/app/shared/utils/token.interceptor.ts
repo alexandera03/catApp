@@ -17,19 +17,6 @@ export const ApiKeyInterceptor: HttpInterceptorFn = (req, next) => {
             api_key: apiKey
         }
     });
-
-    // if (apiKey) {
-    //     if (localStorage.getItem('token')) {
-
-    //         addHeaderReq = req.clone({
-    //             setHeaders: {
-    //               api_key: apiKey
-    //             }
-    //         });
-    //     }
-    // }
-
-
     // Pass the cloned request with the updated header to the next handler
     return next(addHeaderReq);
 };
