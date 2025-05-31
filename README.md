@@ -10,8 +10,7 @@ Aplicación móvil y web desarrollada con **Ionic 8** y **Angular 19**, que perm
 - [Angular 19](https://angular.io/)
 - [Capacitor](https://capacitorjs.com/) (para integraciones nativas)
 - [TypeScript](https://www.typescriptlang.org/)
-- [TailwindCSS](https://tailwindcss.com/) (opcional si se está usando)
-- API de razas de gatos (opcional, si es integrada)
+- [API de razas de gatos](https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t)
 
 ---
 
@@ -31,8 +30,8 @@ Aplicación móvil y web desarrollada con **Ionic 8** y **Angular 19**, que perm
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/cat-breeds-app.git
-cd cat-breeds-app
+git clone https://github.com/alexandera03/catApp.git
+cd catApp
 ```
 
 2. Instala las dependencias del proyecto:
@@ -88,41 +87,28 @@ npx cap open ios
 
 ## 📦 Recursos personalizados
 
-- `resources/icon.png`: Ícono de la app (1024x1024px)
-- `resources/splash.png`: Imagen del splash screen (2732x2732px)
+- `assets/icon-only.png`: Ícono de la app (1024x1024px)
+- `assets/icon-background.png`: Ícono de la app (1024x1024px)
+- `assets/icon-foregorund.png`: Ícono de la app (1024x1024px)
+- `assets/splash.png`: Imagen del splash screen (2732x2732px)
+- `assets/splash-dark.png`: Imagen del splash screen (2732x2732px)
 
 Para generar los recursos:
 
 ```bash
-npm install -g cordova-res
-cordova-res android --icon --splash --copy
-cordova-res ios --icon --splash --copy
+npm install @capacitor/assets
+npx capacitor-assets generate
 ```
 
-> Requiere tener instalada la carpeta `resources/` en la raíz del proyecto.
+> Requiere tener creada la carpeta `assets/` en la raíz del proyecto.
 
 ---
 
-## 📁 Estructura básica
 
-```
-src/
-├── app/
-│   └── pages/
-│       └── home/
-│       └── breed-details/
-├── assets/
-│   └── images/
-├── theme/
-├── index.html
-├── main.ts
-```
-
----
 
 ## 📝 Créditos
 
-Inspirado en el uso de [TheCatAPI](https://thecatapi.com/) y la comunidad de desarrolladores Ionic.
+Inspirado en el uso de [TheCatAPI](https://thecatapi.com/).
 
 ---
 
