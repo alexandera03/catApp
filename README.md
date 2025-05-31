@@ -16,7 +16,7 @@ Aplicación móvil y web desarrollada con **Ionic 8** y **Angular 19**, que perm
 
 ## 📲 Características principales
 
-- Listado de razas de gatos con imagen.
+- Listado de razas de gatos con la imagen.
 - Vista detallada de cada raza.
 - Búsqueda en tiempo real con `ion-searchbar`.
 - Splash screen personalizado.
