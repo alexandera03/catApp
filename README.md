@@ -7,7 +7,7 @@ Aplicación móvil y web desarrollada con **Ionic 8** y **Angular 19**, que perm
 ## 🚀 Tecnologías usadas
 
 - [Ionic 8](https://ionicframework.com/)
-- [Angular 19](https://angular.io/)
+- [Angular 19](https://angular.dev)
 - [Capacitor](https://capacitorjs.com/) (para integraciones nativas)
 - [TypeScript](https://www.typescriptlang.org/)
 - [API de razas de gatos](https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t)
