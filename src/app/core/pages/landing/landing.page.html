@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Catbreeds</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar..." inputmode="text" debounce="120" (ionInput)="search($event)" (ionCancel)="clearSearch()"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-top">
+
+  @if(cats() && cats().length > 0) {
+  @for (cat of cats(); track $index) {
+  <div class="ion-padding">
+    <cards [cat]="cat"></cards>
+  </div>
+  }
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+
+    <ion-infinite-scroll-content>
+      @if(loading()){
+      <div class="ion-padding ion-text-center">
+
+        <ion-spinner name="bubbles"></ion-spinner>
+        Cargando más gatos...
+      </div>
+      }
+    </ion-infinite-scroll-content>
+
+
+  </ion-infinite-scroll>
+
+  }@else {
+  <!-- <ion-list>
+    <ion-list-header>
+      <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list> -->
+  <skeleton-card class="ion-padding"></skeleton-card>
+  }
+
+
+</ion-content>

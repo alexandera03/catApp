@@ -1,0 +1,20 @@
+
+<ion-card >
+  <ion-card-content>
+    <ion-item>
+      <ion-text>
+        <h2>{{cat()?.name}}</h2>
+      </ion-text>
+      <ion-button slot="end" shape="round" color="tertiary"  fill="outline" size="small" [routerLink]="['/detail', cat()?.name]">Más..</ion-button>
+    </ion-item>
+
+    <img [alt]="cat()?.alt_names" [src]="cat()?.image?.url"  />
+    <ion-item >
+      <ion-text>
+        <h2>{{cat()?.origin}}</h2>
+      </ion-text>
+      <ion-text color="tertiary" slot="end"> Intelligence: {{cat()?.intelligence}}</ion-text>
+    </ion-item>
+  </ion-card-content>
+
+</ion-card>

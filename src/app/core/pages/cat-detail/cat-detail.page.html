@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+    @if (cat()) {
+      <ion-title class="ion-text-center">{{cat()[0].name}}</ion-title>
+    }
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  @if (cat()) {
+    <ion-card class="custom-card">
+
+      <!-- Header con imagen -->
+      <div class="card-image-header">
+        <img src="{{cat()[0]!.image!.url}}" alt="{{cat()[0]!.name}}" />
+      </div>
+
+      <!-- Contenido scrollable -->
+      <div class="card-scroll-content">
+        <div class="ion-padding">
+          <p>
+            {{cat()[0]!.description}}
+          </p>
+          <p>
+           Country: {{cat()[0]!.origin}}
+          </p>
+          <p>
+           Intelligence: {{cat()[0]!.intelligence}}
+          </p>
+          <p>
+            Lifespan: {{cat()[0]!.life_span}}
+          </p>
+          <p>Adaptability: {{cat()[0]!.adaptability}}</p>
+        </div>
+      </div>
+
+    </ion-card>
+  }
+
+
+</ion-content>

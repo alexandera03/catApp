@@ -1,0 +1,26 @@
+.custom-card {
+  height: 65vh; // o el alto que desees
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-header {
+  height: 300px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-height: 300px; /* ajusta si quieres limitar altura */
+  }
+}
+
+.card-scroll-content {
+  overflow-y: auto;
+  flex-grow: 1;
+}
